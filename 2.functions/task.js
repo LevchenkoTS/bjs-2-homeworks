@@ -83,7 +83,7 @@ function makeWork (arrOfArr, func) {
     const element = arrOfArr[i];
     const result = func(...element);
     if (result > maxWorkerResult) {
-      maxWorkerResult =  result;
+      maxWorkerResult = result;
     }
   }
   return maxWorkerResult;
