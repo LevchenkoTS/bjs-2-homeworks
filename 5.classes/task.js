@@ -124,9 +124,18 @@ class Student {
 		}
 	}
 
-	getAverage() {
-		return (Object.keys(this.marks).reduce((a, b) => a + this.getAverageBySubject(b), 0)) / Object.keys(this.marks).length;
-	}
+    getAverage() {
+        let subjects = Object.keys(this.marks);
+        if (subjects.length === 0) {
+          return 0;
+        }
+        let avg = 0;
+        for (let sub of subjects) {
+          let subAvg = this.getAverageBySubject(sub);
+          avg += subAvg;
+        }
+        return avg / subjects.length;
+      }
 }
 
 
