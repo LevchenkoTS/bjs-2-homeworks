@@ -40,13 +40,13 @@
         try {
             return new Triangle(a, b, c);
         } catch(Error) {
-            class Object{
+            return{
                 get area (){
                     return "Ошибка! Треугольник не существует";
-                }
+                },
                 get perimeter(){
                     return "Ошибка! Треугольник не существует";
-                }
+                },
             }
             const triangle = new Object();
             return triangle;
